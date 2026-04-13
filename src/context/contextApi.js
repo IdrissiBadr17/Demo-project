@@ -1,6 +1,6 @@
 import {
   WINNING_COMBINATIONS,
-  initialGameBoard,
+  INITIAL_GAME_BOARD,
 } from "../constant/constantsValues.js";
 
 const deriveCurrentPlayer = (gameTurns) => {
@@ -29,7 +29,7 @@ const deriveWinner = (gameBoard) => {
   return winner;
 };
 const deriveGameBoard = (gameTurns) => {
-  let gameBoard = initialGameBoard.map((row) => [...row]);
+  let gameBoard = INITIAL_GAME_BOARD.map((row) => [...row]);
   gameTurns.forEach((turn) => {
     const { row, col } = turn.square;
     gameBoard[row][col] = turn.player;

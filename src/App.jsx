@@ -8,7 +8,7 @@ import {
   deriveGameBoard,
 } from "./context/contextApi.js";
 import GameOver from "./components/GameOver.jsx";
-import { initialPlayers } from "./constant/constantsValues.js";
+import { PLAYERS } from "./constant/constantsValues.js";
 
 /*
  * App
@@ -23,7 +23,7 @@ import { initialPlayers } from "./constant/constantsValues.js";
 
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
-  const [players, setPlayers] = useState(initialPlayers);
+  const [players, setPlayers] = useState(PLAYERS);
 
   const activePlayer = deriveCurrentPlayer(gameTurns);
   const gameBoard = deriveGameBoard(gameTurns);
@@ -54,7 +54,6 @@ function App() {
       [playerSymbol]: newName,
     }));
   }
-
 
   return (
     <main>

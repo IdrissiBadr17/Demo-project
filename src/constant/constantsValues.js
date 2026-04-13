@@ -41,13 +41,13 @@ export const WINNING_COMBINATIONS = [
   ],
 ];
 
-export const initialGameBoard = [
+export const INITIAL_GAME_BOARD = [
   ["", "", ""],
   ["", "", ""],
   ["", "", ""],
 ];
 
-export const initialPlayers = {
+export const PLAYERS = {
   X: "Player 1",
   O: "Player 2",
 };
